@@ -1,1 +1,1 @@
-export * from './pizza__icon.png';
+export * from './icons/pizza__icon.png';

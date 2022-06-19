@@ -1,10 +1,14 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
 import { Configurator } from 'views';
+import styles from 'App.styles';
+import { Global } from '@emotion/react';
 
 function App() {
   return (
     <div>
-      <Configurator></Configurator>
+      <Global styles={styles.global} />
+      <Configurator />
     </div>
   );
 }
