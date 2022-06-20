@@ -10,6 +10,7 @@ const buttonStyle = css({
   padding: '16px 60px',
   border: '1px solid #DBDBDB',
   borderRadius: '36px',
+  backgroundColor: 'transparent',
 });
 const textStyle = css({
   textAlign: 'center',
