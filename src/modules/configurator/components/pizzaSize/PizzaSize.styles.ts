@@ -9,12 +9,20 @@ const pizza__size__selector = css({
 });
 const pizza__size__btn = css({
   padding: '14px 48px',
+  backgroundColor: 'lightgray',
+  borderRadius: '36px',
+  border: 'none',
+});
+const pizza__size__btn2 = css({
+  padding: '14px 48px',
+  backgroundColor: '#FAFAFA',
   borderRadius: '36px',
   border: 'none',
 });
 const styles = {
   pizza__size__selector,
   pizza__size__btn,
+  pizza__size__btn2,
 };
 
 export default styles;
