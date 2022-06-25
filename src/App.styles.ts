@@ -4,6 +4,8 @@ const global = css`
   body {
     margin: 0;
     background-color: #fafafafa;
+    font-family: arial;
+    font-weight: bold;
   }
 `;
 

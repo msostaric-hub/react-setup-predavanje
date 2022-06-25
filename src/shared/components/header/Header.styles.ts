@@ -15,9 +15,12 @@ const buttonStyle = css({
 const textStyle = css({
   textAlign: 'center',
 });
-
+const header__img = css({
+  transform: 'translateX(40px)',
+});
 const styles = {
   header,
+  header__img,
   buttonStyle,
   textStyle,
 };

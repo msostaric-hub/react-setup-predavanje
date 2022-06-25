@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
       <div css={styles.header}>
         <span css={styles.textStyle}>Pizz-a-tron</span>
         <div>
-          <img src={Pizza} />
+          <img src={Pizza} css={styles.header__img} />
         </div>
         <button css={styles.buttonStyle}>Log out</button>
       </div>

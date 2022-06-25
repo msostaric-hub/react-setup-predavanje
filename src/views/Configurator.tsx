@@ -11,6 +11,7 @@ import Meat from '../assets/icons/meat__icon.png';
 import Pineapple from '../assets/icons/pineapple__icon.png';
 import Shroom from '../assets/icons/shroom__icon.png';
 import Corn from '../assets/icons/corn__icon.png';
+import { Discount } from 'modules/configurator/components/discount/Discount';
 
 export const Configurator: React.FC = () => {
   return (
@@ -32,6 +33,8 @@ export const Configurator: React.FC = () => {
         <div css={styles.pizza__size__container}>
           <PizzaSize />
         </div>
+        <p css={styles.title__txt}>Get the discount</p>
+        <Discount />
       </div>
     </div>
   );

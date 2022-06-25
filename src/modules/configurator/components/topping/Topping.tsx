@@ -16,11 +16,19 @@ export const Topping: React.FC<Props> = ({ name, toppingImg }) => {
 
   return (
     <a
-      css={isActive ? styles.topping__card2 : styles.topping__card}
+      css={
+        isActive
+          ? [styles.topping__card, styles.topping__selected]
+          : styles.topping__card
+      }
       onClick={clickHandler}
     >
       <a
-        css={isActive ? styles.topping__img2 : styles.topping__img}
+        css={
+          isActive
+            ? [styles.topping__img, styles.topping__img__selected]
+            : styles.topping__img
+        }
         onClick={clickHandler}
       >
         <img src={toppingImg} alt="Topping" />

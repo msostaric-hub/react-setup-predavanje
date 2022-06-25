@@ -8,24 +8,39 @@ export const PizzaSize: React.FC = () => {
   };
   return (
     <div css={styles.pizza__size__selector}>
-      <input
+      <a
         type="button"
-        value="S"
-        css={selected ? styles.pizza__size__btn2 : styles.pizza__size__btn}
+        css={
+          selected
+            ? [styles.pizza__size__btn, styles.pizza__size__btn__selected]
+            : styles.pizza__size__btn
+        }
         onClick={clickHandler}
-      />
-      <input
+      >
+        S
+      </a>
+      <a
         type="button"
-        value="M"
-        css={selected ? styles.pizza__size__btn2 : styles.pizza__size__btn}
+        css={
+          selected
+            ? [styles.pizza__size__btn, styles.pizza__size__btn__selected]
+            : styles.pizza__size__btn
+        }
         onClick={clickHandler}
-      />
-      <input
+      >
+        M
+      </a>
+      <a
         type="button"
-        value="L"
-        css={selected ? styles.pizza__size__btn2 : styles.pizza__size__btn}
+        css={
+          selected
+            ? [styles.pizza__size__btn, styles.pizza__size__btn__selected]
+            : styles.pizza__size__btn
+        }
         onClick={clickHandler}
-      />
+      >
+        L
+      </a>
     </div>
   );
 };
