@@ -14,15 +14,9 @@ const wrapper = css({
   margin: '0 auto',
   display: 'flex',
   flexDirection: 'column',
-  alignContent: 'center',
 });
 
-const topping__container = css({
-  display: 'flex',
-  justifyContent: 'space-around',
-});
-
-const pizza__size__container = css({
+const component__container = css({
   display: 'flex',
   justifyContent: 'space-around',
 });
@@ -30,9 +24,8 @@ const pizza__size__container = css({
 const styles = {
   title__txt,
   wrapper,
-  topping__container,
+  component__container,
   small__txt,
-  pizza__size__container,
 };
 
 export default styles;

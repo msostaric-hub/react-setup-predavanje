@@ -4,12 +4,9 @@ const topping__card = css({
   background: '#FFFFFF',
   border: '1px solid #F2F2F2',
   boxShadow: ' 0px 12px 16px rgba(0, 0, 0, 0.03)',
-  textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
   borderRadius: '56px',
-  minWidth: '80px',
-  minHeight: '120px',
+  minWidth: '98px',
+  minHeight: '148px',
 });
 
 const topping__selected = css({
@@ -17,11 +14,12 @@ const topping__selected = css({
 });
 
 const topping__img = css({
+  border: 'none',
   backgroundColor: 'white',
   padding: '15px',
-  margin: '8px',
-  borderRadius: '50%',
-  minHeight: '28px',
+  borderRadius: '40px',
+  minHeight: '76px',
+  minWidth: '76px',
   boxShadow: '0px 12px 28px rgba(0, 0, 0, 0.03)',
 });
 

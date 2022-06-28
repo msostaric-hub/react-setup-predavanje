@@ -5,8 +5,12 @@ import styles from './Discount.styles';
 export const Discount: React.FC = () => {
   return (
     <div css={styles.discount__container}>
-      <input type="text" placeholder="Enter discount code" />
-      <button>Add discount</button>
+      <input
+        type="text"
+        placeholder="Enter discount code"
+        css={styles.input__txt}
+      />
+      <button css={styles.discount__btn}>Apply</button>
     </div>
   );
 };
