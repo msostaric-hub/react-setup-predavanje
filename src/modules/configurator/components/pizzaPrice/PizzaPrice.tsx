@@ -7,12 +7,12 @@ export const PizzaPrice: React.FC = () => {
     <div css={styles.container}>
       <div css={styles.content}>
         <input type="number" min={0} css={styles.quantity} />
-        <p css={styles.content__txt}>QTY</p>
+        <p css={styles.content__txt}>qty</p>
       </div>
       <div css={styles.content__border} />
       <div css={styles.content}>
         <p>$22.50</p>
-        <p>Order total</p>
+        <p css={styles.content__txt}>Order total</p>
       </div>
       <div css={styles.content}>
         <button css={styles.btn}>Buy Pizza! Pizza!</button>

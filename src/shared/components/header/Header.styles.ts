@@ -7,7 +7,7 @@ const header = css({
 });
 
 const buttonStyle = css({
-  padding: '16px 60px',
+  padding: '0 60px',
   border: '1px solid #DBDBDB',
   borderRadius: '36px',
   backgroundColor: 'transparent',

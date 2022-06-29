@@ -16,6 +16,7 @@ const input__txt = css({
   border: 'none',
   backgroundColor: '#ECECF3',
   fontSize: '16px',
+  outline: 'none',
 });
 
 const discount__btn = css({

@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
   return (
     <header>
       <div css={styles.header}>
-        <span css={styles.textStyle}>Pizz-a-tron</span>
+        <p css={styles.textStyle}>Pizz-a-tron</p>
         <div>
           <img src={Pizza} css={styles.header__img} />
         </div>
