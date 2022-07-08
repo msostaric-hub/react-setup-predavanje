@@ -12,6 +12,11 @@ export const Topping: React.FC<Props> = ({ name, toppingImg }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const clickHandler = () => {
     setIsActive(!isActive);
+
+    const toppingData = {
+      name: name,
+    };
+    console.log(toppingData);
   };
 
   return (
