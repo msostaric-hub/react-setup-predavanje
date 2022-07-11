@@ -1,22 +1,19 @@
 /** @jsxImportSource @emotion/react */
 
+import { ToppingInfo } from 'modules/configurator/types';
 import React, { useState } from 'react';
 import styles from './Topping.styles';
 
-interface Props {
-  name: string;
-  toppingImg: string;
-}
+export const Topping: React.FC<ToppingInfo> = ({ name, toppingImg, price }) => {
+  const [isActive, setIsActive] = useState(false);
 
-export const Topping: React.FC<Props> = ({ name, toppingImg }) => {
-  const [isActive, setIsActive] = useState<boolean>(false);
+  const toppingData = {
+    name: name,
+    price: price,
+  };
+  console.log(toppingData);
   const clickHandler = () => {
     setIsActive(!isActive);
-
-    const toppingData = {
-      name: name,
-    };
-    console.log(toppingData);
   };
 
   return (
