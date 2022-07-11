@@ -4,14 +4,9 @@ import { ToppingInfo } from 'modules/configurator/types';
 import React, { useState } from 'react';
 import styles from './Topping.styles';
 
-export const Topping: React.FC<ToppingInfo> = ({ name, toppingImg, price }) => {
+export const Topping: React.FC<ToppingInfo> = ({ name, toppingImg }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const toppingData = {
-    name: name,
-    price: price,
-  };
-  console.log(toppingData);
   const clickHandler = () => {
     setIsActive(!isActive);
   };
