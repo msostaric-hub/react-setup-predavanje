@@ -1,10 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
+import React, { useState } from 'react';
+import { ClickCounter } from '../clickCounter';
 import styles from './PizzaPrice.styles';
 
 export const PizzaPrice: React.FC = () => {
+  const [active, setActive] = useState(true);
+  const activeHandler = () => {
+    setActive(!active);
+  };
   return (
     <div css={styles.container}>
+      <button onClick={activeHandler}>Unmount</button>
+      {active && <ClickCounter />}
       <div css={styles.content}>
         <input type="number" min={0} css={styles.quantity} />
         <p css={styles.content__txt}>qty</p>

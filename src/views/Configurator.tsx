@@ -5,11 +5,15 @@ import {
   Discount,
   Toppings,
 } from 'modules/configurator';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from 'shared/components';
 import styles from './Configurator.styles';
 
 export const Configurator: React.FC = () => {
+  useEffect(() => {
+    alert('Configurator view mounted');
+  }, []);
+
   return (
     <div>
       <div css={styles.wrapper}>
