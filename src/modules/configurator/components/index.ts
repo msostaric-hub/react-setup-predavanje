@@ -4,3 +4,4 @@ export * from './discount';
 export * from './pizzaSize';
 export * from './pizzaPrice';
 export * from './clickCounter';
+export * from './pizzaSizes';

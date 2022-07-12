@@ -1,45 +1,25 @@
 /** @jsxImportSource @emotion/react */
+import { PizzaSizesType } from 'modules/configurator/types';
 import React, { useState } from 'react';
 import styles from './PizzaSize.styles';
-export const PizzaSize: React.FC = () => {
+export const PizzaSize: React.FC<PizzaSizesType> = ({ size }) => {
   const [selected, setSelected] = useState<string>('');
 
   const setSelectedSize = (size: string) => {
-    if (size !== selected) setSelected(size);
-    else setSelected('');
+    size !== selected ? setSelected(size) : setSelected('');
   };
 
   return (
-    <div css={styles.pizza__size__selector}>
+    <div>
       <button
         css={
-          selected === 'S'
+          selected === size
             ? [styles.pizza__size__btn, styles.pizza__size__btn__selected]
             : styles.pizza__size__btn
         }
-        onClick={() => setSelectedSize('S')}
+        onClick={() => setSelectedSize(size)}
       >
-        S
-      </button>
-      <button
-        css={
-          selected === 'M'
-            ? [styles.pizza__size__btn, styles.pizza__size__btn__selected]
-            : styles.pizza__size__btn
-        }
-        onClick={() => setSelectedSize('M')}
-      >
-        M
-      </button>
-      <button
-        css={
-          selected === 'L'
-            ? [styles.pizza__size__btn, styles.pizza__size__btn__selected]
-            : styles.pizza__size__btn
-        }
-        onClick={() => setSelectedSize('L')}
-      >
-        L
+        {size}
       </button>
     </div>
   );
