@@ -3,7 +3,7 @@ import {
   PizzaPrice,
   Discount,
   Toppings,
-  PizzaSizes,
+  PizzaSize,
 } from 'modules/configurator';
 import React, { useEffect } from 'react';
 import { Header } from 'shared/components';
@@ -25,7 +25,7 @@ export const Configurator: React.FC = () => {
         <p css={styles.small__txt}>Total price +$3.00</p>
         <p css={styles.title__txt}>Pizza! Pizza! size</p>
         <div css={styles.component__container}>
-          <PizzaSizes />
+          <PizzaSize />
         </div>
         <p css={styles.title__txt}>Get the discount</p>
         <div css={styles.component__container}>
