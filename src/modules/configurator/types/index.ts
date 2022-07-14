@@ -1,2 +1,2 @@
 export * from './ToppingInfo';
-export * from './PizzaSizesType';
+export * from './PizzaSizes';

@@ -1,12 +1,21 @@
 /** @jsxImportSource @emotion/react */
-import { PizzaSizesType } from 'modules/configurator/types';
-import React, { useState } from 'react';
+import { PizzaSizes } from 'modules/configurator/types';
+import React from 'react';
 import styles from './PizzaSizeItem.styles';
-export const PizzaSizeItem: React.FC<PizzaSizesType> = ({ size }) => {
-  const [selected, setSelected] = useState<boolean>(false);
 
-  function toggleSelected() {
-    setSelected(!selected);
+interface PizzaSizeProps {
+  selectedSize?: PizzaSizes;
+  size: PizzaSizes;
+  setPizzaSize: (size: PizzaSizes) => void;
+}
+
+export const PizzaSizeItem: React.FC<PizzaSizeProps> = ({
+  selectedSize,
+  size,
+  setPizzaSize,
+}) => {
+  function handleSelect() {
+    setPizzaSize(size);
   }
 
   return (
@@ -14,9 +23,9 @@ export const PizzaSizeItem: React.FC<PizzaSizesType> = ({ size }) => {
       <button
         css={[
           styles.pizza__size__btn,
-          selected && styles.pizza__size__btn__selected,
+          selectedSize === size && styles.pizza__size__btn__selected,
         ]}
-        onClick={toggleSelected}
+        onClick={handleSelect}
       >
         {size}
       </button>
