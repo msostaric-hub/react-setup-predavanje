@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+
 import { PizzaSizes } from 'modules/configurator/types';
 import React from 'react';
 import styles from './PizzaSizeItem.styles';
@@ -19,16 +20,14 @@ export const PizzaSizeItem: React.FC<PizzaSizeProps> = ({
   }
 
   return (
-    <div css={styles.pizza__container}>
-      <button
-        css={[
-          styles.pizza__size__btn,
-          selectedSize === size && styles.pizza__size__btn__selected,
-        ]}
-        onClick={handleSelect}
-      >
-        {size}
-      </button>
-    </div>
+    <button
+      css={[
+        styles.pizza__size__btn,
+        selectedSize === size && styles.pizza__size__btn__selected,
+      ]}
+      onClick={handleSelect}
+    >
+      {size}
+    </button>
   );
 };

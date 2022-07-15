@@ -18,7 +18,7 @@ const wrapper = css({
 
 const component__container = css({
   display: 'flex',
-  justifyContent: 'space-around',
+  justifyContent: 'center',
 });
 
 const styles = {

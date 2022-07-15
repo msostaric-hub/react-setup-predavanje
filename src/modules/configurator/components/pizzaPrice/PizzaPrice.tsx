@@ -10,7 +10,7 @@ export const PizzaPrice: React.FC = () => {
   };
   return (
     <div css={styles.container}>
-      <button onClick={activeHandler}>Unmount</button>
+      <button onClick={activeHandler}>Mount/Unmount</button>
       {active && <ClickCounter />}
       <div css={styles.content}>
         <input type="number" min={0} css={styles.quantity} />

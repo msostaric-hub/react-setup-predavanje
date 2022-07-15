@@ -11,14 +11,10 @@ const pizza__size__btn__selected = css({
   backgroundColor: '#FFFF',
   boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.1)',
 });
-const pizza__container = css({
-  display: 'flex',
-});
 
 const styles = {
   pizza__size__btn,
   pizza__size__btn__selected,
-  pizza__container,
 };
 
 export default styles;
