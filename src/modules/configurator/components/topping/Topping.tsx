@@ -1,32 +1,40 @@
 /** @jsxImportSource @emotion/react */
 
-import { ToppingInfo } from 'modules/configurator/types';
-import React, { useState } from 'react';
+import { ToppingInfo, ToppingNames } from 'modules/configurator/types';
+import React from 'react';
 import styles from './Topping.styles';
 
-export const Topping: React.FC<ToppingInfo> = ({ name, toppingImg }) => {
-  const [isActive, setIsActive] = useState(false);
+interface ToppingProps {
+  selectedName?: ToppingNames;
+  toppingName: ToppingNames;
+  setToppingName: (toppingName: ToppingNames) => void;
+}
 
-  const clickHandler = () => {
-    setIsActive(!isActive);
-  };
+export const Topping: React.FC<ToppingInfo & ToppingProps> = ({
+  name,
+  toppingImg,
+  selectedName,
+  toppingName,
+  setToppingName,
+}) => {
+  function handleSelect() {
+    setToppingName(toppingName);
+  }
 
   return (
     <button
-      css={
-        isActive
-          ? [styles.topping__card, styles.topping__selected]
-          : styles.topping__card
-      }
-      onClick={clickHandler}
+      css={[
+        styles.topping__card,
+        selectedName === toppingName && styles.topping__selected,
+      ]}
+      onClick={handleSelect}
     >
       <button
-        css={
-          isActive
-            ? [styles.topping__img, styles.topping__img__selected]
-            : styles.topping__img
-        }
-        onClick={clickHandler}
+        css={[
+          styles.topping__img,
+          selectedName === toppingName && styles.topping__img__selected,
+        ]}
+        onClick={handleSelect}
       >
         <img src={toppingImg} alt="Topping" />
       </button>
