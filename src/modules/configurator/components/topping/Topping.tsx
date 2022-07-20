@@ -6,7 +6,7 @@ import styles from './Topping.styles';
 
 interface ToppingProps {
   selectedName?: ToppingNames;
-  toppingName: ToppingNames;
+  toppingName?: ToppingNames;
   setToppingName: (toppingName: ToppingNames) => void;
 }
 
