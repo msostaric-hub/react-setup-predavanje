@@ -6,7 +6,7 @@ import styles from './Topping.styles';
 
 interface ToppingProps {
   selectedName?: ToppingNames;
-  toppingName?: ToppingNames;
+  toppingName: ToppingNames;
   setToppingName: (toppingName: ToppingNames) => void;
 }
 
@@ -20,6 +20,7 @@ export const Topping: React.FC<ToppingInfo & ToppingProps> = ({
   console.log(toppingName);
   function handleSelect() {
     if (!toppingName) {
+      console.log('error, selected topping value is: ', toppingName);
       return;
     }
 

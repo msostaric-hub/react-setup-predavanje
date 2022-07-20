@@ -13,6 +13,7 @@ export const Toppings: React.FC = () => {
   }
 
   console.log('Selected topping is: ', selectedName);
+
   return (
     <div css={styles.component__container}>
       {toppings.map(({ name, toppingImg, price }) => (
@@ -21,7 +22,6 @@ export const Toppings: React.FC = () => {
           toppingImg={toppingImg}
           price={price}
           key={name}
-          toppingName={selectedName}
           selectedName={selectedName}
           setToppingName={setToppingName}
         />

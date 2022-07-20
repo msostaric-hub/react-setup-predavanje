@@ -4,7 +4,7 @@ import { ClickCounter } from '../clickCounter';
 import styles from './PizzaPrice.styles';
 
 export const PizzaPrice: React.FC = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const activeHandler = () => {
     setActive(!active);
   };
