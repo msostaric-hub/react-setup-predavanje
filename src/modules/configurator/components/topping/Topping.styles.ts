@@ -14,9 +14,7 @@ const topping__selected = css({
 });
 
 const topping__img = css({
-  border: 'none',
   backgroundColor: 'white',
-  padding: '15px',
   borderRadius: '40px',
   minHeight: '76px',
   minWidth: '76px',

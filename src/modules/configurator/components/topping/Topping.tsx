@@ -6,7 +6,7 @@ import styles from './Topping.styles';
 
 interface ToppingProps {
   selectedName?: ToppingNames;
-  toppingName: ToppingNames;
+  toppingName?: ToppingNames;
   setToppingName: (toppingName: ToppingNames) => void;
 }
 
@@ -17,7 +17,12 @@ export const Topping: React.FC<ToppingInfo & ToppingProps> = ({
   toppingName,
   setToppingName,
 }) => {
+  console.log(toppingName);
   function handleSelect() {
+    if (!toppingName) {
+      return;
+    }
+
     setToppingName(toppingName);
   }
 
@@ -29,7 +34,7 @@ export const Topping: React.FC<ToppingInfo & ToppingProps> = ({
       ]}
       onClick={handleSelect}
     >
-      <button
+      <div
         css={[
           styles.topping__img,
           selectedName === toppingName && styles.topping__img__selected,
@@ -37,7 +42,7 @@ export const Topping: React.FC<ToppingInfo & ToppingProps> = ({
         onClick={handleSelect}
       >
         <img src={toppingImg} alt="Topping" />
-      </button>
+      </div>
       <p css={styles.topping__txt}>{name}</p>
     </button>
   );

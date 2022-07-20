@@ -21,7 +21,7 @@ export const Toppings: React.FC = () => {
           toppingImg={toppingImg}
           price={price}
           key={name}
-          toppingName={name}
+          toppingName={selectedName}
           selectedName={selectedName}
           setToppingName={setToppingName}
         />
